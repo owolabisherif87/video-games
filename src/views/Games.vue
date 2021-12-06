@@ -106,14 +106,16 @@ export default {
     onMounted(async () => {
       isLoading.value = true;
 
-      getGames
-        .then((data) => {
-          games.value = data;
-          isLoading.value = false;
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
+      // getGames
+      //   .then((data) => {
+      //     games.value = data;
+      //     isLoading.value = false;
+      //   })
+      //   .catch((err) => {
+      //     console.log(err.message);
+      //   });
+
+      getGames();
     });
 
     watch(order, () => {
@@ -146,11 +148,11 @@ export default {
       )
     );
 
-    const getGames = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(api);
-      }, 3000);
-    });
+    // const getGames = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve(api);
+    //   }, 3000);
+    // });
 
     /*
       Note: The end-point "https://shorturl.at/ghlpK" was not accessible,
@@ -172,12 +174,12 @@ export default {
     //       console.log(err.message);
     //     });
 
-    // const getGames = () => {
-    //   axios
-    //     .get("https://shorturl.at/ghlpK")
-    //     .then((data) => console.log(data))
-    //     .catch((err) => console.log(err.message));
-    // };
+    const getGames = () => {
+      axios
+        .get("https://shorturl.at/ghlpK")
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err.message));
+    };
 
     const flowDown = () => {
       if (order.value === "name") {
