@@ -1,4 +1,4 @@
-# quotes
+# Games
 
 ## Project setup
 ```
