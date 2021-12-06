@@ -1,0 +1,280 @@
+@import url("https://fonts.google.com/specimen/Mulish");
+@import url("https://fonts.google.com/specimen/Montserrat");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #c1d1e8;
+  --input-bg: #182c47;
+  --button-bg: #5692e8;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-image: linear-gradient(90deg, #081221, #03080f);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+button {
+  font-family: "Montesrrat", sans-serif;
+  color: #fff;
+}
+
+option {
+  color: #fff;
+}
+
+.container {
+  width: 90vw;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+
+nav {
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+.card,
+.panel,
+.sidebar {
+  background-color: #0e1a2b;
+}
+
+button,
+.score {
+  background-color: var(--button-bg);
+}
+
+button {
+  border: none;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.clear {
+  width: auto;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+button.clear:hover {
+  background-color: #116dee;
+}
+
+.button-clear-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-gray {
+  color: var(--text-color);
+}
+
+label {
+  display: block;
+}
+
+input,
+select,
+textarea {
+  background: var(--input-bg);
+  display: block;
+  border: none;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px 5px;
+  color: #fff;
+  font-size: 15px;
+}
+
+input:active,
+input:focus,
+select:focus,
+select:active {
+  outline: none;
+}
+
+.card {
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.title {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.sidebar {
+  width: 100%;
+  padding: 20px;
+}
+
+.score {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.order-box div {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.order-box div select {
+  flex: 1;
+}
+
+.order-box svg {
+  fill: #fff;
+  font-size: 10px;
+  width: 1.2rem;
+}
+.order-box .icon-box {
+  background-color: var(--button-bg);
+  padding: 8px;
+  overflow-y: hidden;
+  height: fit-content;
+}
+
+.loading-box,
+.no-game-box {
+  background-color: var(--button-bg);
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact-form-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-wrapper {
+  width: 60%;
+  height: auto;
+}
+
+.contact-form-wrapper p {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contact-form-wrapper form {
+  background-color: #0e1a2b;
+  padding: 20px;
+}
+.contact-form-wrapper form h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.contact-form-wrapper .button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-form-wrapper .button-wrapper button {
+  width: fit-content;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+
+.error {
+  background-color: #d15435ef;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.error p {
+  font-size: 18px;
+  margin: 0;
+}
+
+progress {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+  }
+
+  .sidebar {
+    margin-bottom: 30px;
+  }
+
+  button.clear {
+    width: 100%;
+  }
+
+  .form-group {
+    display: block;
+  }
+
+  .contact-form-wrapper {
+    width: 90%;
+  }
+}
